@@ -101,9 +101,13 @@ async def run():
                                 tmp_data += [cmp_time]
                 #print(rmv)
                 #print(tmp_data)
+
+                
+
                 if len(rmv) != 0:
                     with open(file, "w") as f:
                         for line in tmp_data:
+                            print(line)
                             if line != tmp_data[-1]:
                                 f.write(line + "\n")
                             else:
@@ -138,7 +142,7 @@ async def add(ctx):
     task = await client.wait_for('message', timeout=120)
     get_files = str(author_id) + ".txt"
     with open(get_files, "a") as f:
-        f.write("\n"+task.content + "+" + target_time.content + "+" + date + "+" + time)
+        f.write('\n' + task.content + "+" + target_time.content + "+" + date + "+" + time)
 
 
 @client.command() 
@@ -167,46 +171,67 @@ async def time(ctx):
                 if len(lines) <= 2:
                     embed.add_field(name="Error", value="No Tasks available")
                 else:
+                    #sorting
+                    sorted_tasks = {}
                     for i in range(2, len(lines)):
-                        time_cmp = lines[i].split("+")
-                        d,t = time_cmp[1], time_cmp[2]
-                        task = time_cmp[0]
-                        date = d.split("/")
-                        time = t.split(":")
-                        d = list(map(int, date))
-                        t = list(map(int, time))
-                        construct = datetime(d[2], d[1], d[0], t[0], t[1], t[2])
-                        #print(construct)
-                        diff = str(construct - time_now)
-                        #diff = diff.strftime("%H:%M:%S")
-                        diff = diff.split(":")
-                        #print(diff)
-                        d,h,m,s = [0] * 4
-                        tmp = diff[0]
-
-                        if ', ' in tmp:
-                            days = diff[0].split(', ')
-                            num_days = days[0].split()
-                            d = int(num_days[0])
-                            h, m = int(days[1]), int(diff[1])
-                       
-                            
+                        if lines[i] == "" or lines[i] == "\n":
+                            continue
                         else:
-                            h,m = int(diff[0]), int(diff[1])
+                            sort_tasks = lines[i].split("+")
+                            #print(sort_tasks)
+                            sd,sm,sy = map(int, sort_tasks[1].split("/"))
+                            h,m,s = map(int, sort_tasks[2].split(":"))
+                            create_time = datetime(sy, sm, sd, h, m, s)
+                            sorted_tasks[create_time] = sort_tasks[0]
+                    
+                    ordered_tasks = sorted(sorted_tasks.items())
+                    ordered_tasks = [x[1] for x in ordered_tasks]
+                    
+                    for j, x in enumerate(ordered_tasks):
+                        for i in range(2, len(lines)):
+                            if lines[i] == "" or lines[i] == "\n": 
+                                continue
+                            else:
+                                time_cmp = lines[i].split("+")
+                                if time_cmp[0] == x:
+                                    d,t = time_cmp[1], time_cmp[2]
+                                    task = time_cmp[0]
+                                    date = d.split("/")
+                                    time = t.split(":")
+                                    d = list(map(int, date))
+                                    t = list(map(int, time))
+                                    construct = datetime(d[2], d[1], d[0], t[0], t[1], t[2])
+                                    #print(construct)
+                                    diff = str(construct - time_now)
+                                    #diff = diff.strftime("%H:%M:%S")
+                                    diff = diff.split(":")
+                                    #print(diff)
+                                    d,h,m,s = [0] * 4
+                                    tmp = diff[0]
 
-                        s = diff[2].split('.')
-                        s = int(s[0])
-                        time_left = ""
-                        if d != 0:
-                            time_left += f'{d} Days '
-                        if h != 0:
-                            time_left += f'{h} Hours '
-                        if m != 0:
-                            time_left += f'{m} Minutes '
-                        if s != 0:
-                            time_left += f'{s} Seconds'
-                        time_left += ' left'
-                        embed.add_field(name=f'**{time_left}**', value = f'*Task {i-1}: {task}*', inline=False)
+                                    if ', ' in tmp:
+                                        days = diff[0].split(', ')
+                                        num_days = days[0].split()
+                                        d = int(num_days[0])
+                                        h, m = int(days[1]), int(diff[1])
+                                
+                                        
+                                    else:
+                                        h,m = int(diff[0]), int(diff[1])
+
+                                    s = diff[2].split('.')
+                                    s = int(s[0])
+                                    time_left = ""
+                                    if d != 0:
+                                        time_left += f'{d} Days '
+                                    if h != 0:
+                                        time_left += f'{h} Hours '
+                                    if m != 0:
+                                        time_left += f'{m} Minutes '
+                                    if s != 0:
+                                        time_left += f'{s} Seconds'
+                                    time_left += ' left'
+                                    embed.add_field(name=f'**{time_left}**', value = f'*Task {j+1}: {task}*', inline=False)
 
                 await channel.send(embed=embed)
 
@@ -299,16 +324,35 @@ async def me(ctx):
         if len(data) != 2:
             embed.add_field(name="**Not Completed**", value=u'\u2718')
 
+        # sorting
+        sorted_tasks = {}
         for i in range(2, len(data)):
             if data[i] == "" or data[i] == "\n":
                 continue
             else:
-                t_name, t_d, t_t, s_d, s_t = data[i].split('+')
-                #embed.add_field(name=u'\u2713', value="testing")
-                embed.add_field(name=f'Due: {t_d} {t_t}\n', value=f'*Task {i-1}: {t_name}*', inline=False)
-            #in_embed = discord.Embed(title = "testing", url="https://asgphone.netlify.app/", color=discord.Color.red(), description="RIP")
+                sort_tasks = data[i].split("+")
+                #print(sort_tasks)
+                sd,sm,sy = map(int, sort_tasks[1].split("/"))
+                h,m,s = map(int, sort_tasks[2].split(":"))
+                create_time = datetime(sy, sm, sd, h, m, s)
+                sorted_tasks[create_time] = sort_tasks[0]
+        
+        ordered_tasks = sorted(sorted_tasks.items())
+        ordered_tasks = [x[1] for x in ordered_tasks]
+        #print(ordered_tasks)
 
-        #embed.add_field(name="**Completed**", value=u'\u2713')
+        for j,x in enumerate(ordered_tasks):
+            for i in range(2, len(data)):    
+                if data[i] == "" or data[i] == "\n":
+                    continue
+                else:
+                    t_name, t_d, t_t, s_d, s_t = data[i].split("+")
+                    if t_name == x:
+                        #embed.add_field(name=u'\u2713', value="testing")
+                        embed.add_field(name=f'Due: {t_d} {t_t}\n', value=f'*Task {j+1}: {t_name}*', inline=False)
+                        #in_embed = discord.Embed(title = "testing", url="https://asgphone.netlify.app/", color=discord.Color.red(), description="RIP")
+
+            #embed.add_field(name="**Completed**", value=u'\u2713')
         await channel.send(embed=embed)
 
     
