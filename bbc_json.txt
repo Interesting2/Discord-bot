@@ -5,26 +5,58 @@
     "articles": [
         {
             "author": "BBC News",
-            "title": "Afghanistan: US orders civilian jets to join evacuation",
-            "description": "A Pentagon statement says 18 commercial aircraft will help with the evacuation effort.",
-            "url": "http://www.bbc.co.uk/news/world-asia-58299804",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/6C02/production/_120205672_tv069635286.jpg",
+            "title": "Afghanistan: US aims to complete evacuations by deadline",
+            "description": "Allies step up calls to extend a 31 August withdrawal, but the Taliban insist this will violate a deal.",
+            "url": "http://www.bbc.co.uk/news/world-asia-58310905",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8A54/production/_120221453_mediaitem120221452.jpg",
             "publishedAt": null
         },
         {
             "author": "BBC News",
-            "title": "BBC reports from the tarmac in Kabul airport",
-            "description": "The BBC's Lyse Doucet witnesses Afghan men, women and children fleeing the Taliban regime.",
-            "url": "http://www.bbc.co.uk/news/world-asia-58300416",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/ABB8/production/_120206934_p09sxmvg.jpg",
+            "title": "Anti-Taliban resistance group says it has thousands of fighters",
+            "description": "The group says it wants to pursue peace, but if that fails it claims to have thousands of fighters ready.",
+            "url": "http://www.bbc.co.uk/news/world-asia-58239156",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/591B/production/_120211822_3620269c-1fbd-4e7b-8e9c-b00e1fc1f503.jpg",
+            "publishedAt": null
+        },
+        {
+            "author": "BBC Sport",
+            "title": "A 'different' Games but Paralympians hope to shine",
+            "description": "The opening ceremony of the Tokyo Paralympics takes place on Tuesday with the Japanese capital still facing Covid-19 challenges.",
+            "url": "http://www.bbc.co.uk/sport/disability-sport/58306545",
+            "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/29CD/production/_120210701_hi069700955.jpg",
             "publishedAt": null
         },
         {
             "author": "BBC News",
-            "title": "Afghanistan crisis: 'Hey world, do you care what happens here?'",
-            "description": "A young woman shares her fears a week after the Taliban takeover of Afghanistan.",
-            "url": "http://www.bbc.co.uk/news/world-asia-58297623",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8E62/production/_120205463_hi069694600.jpg",
+            "title": "Climate change: Europe's extreme rains made more likely by humans",
+            "description": "Heavy rainfall that led to deadly floods in Germany and Belgium was influenced by human induced warming.",
+            "url": "http://www.bbc.co.uk/news/science-environment-58309900",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/14AE8/production/_120221748_gettyimages-1331474924.jpg",
+            "publishedAt": null
+        },
+        {
+            "author": "BBC News",
+            "title": "Pfizer becomes first Covid vaccine to gain full FDA approval",
+            "description": "It is the first Covid jab to receive federal approval, and opens the door to new vaccine mandates.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-58309254",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/2AFA/production/_120220011_gettyimages-1234769253.jpg",
+            "publishedAt": null
+        },
+        {
+            "author": "BBC News",
+            "title": "Lightning strikes New York's One World Trade Center",
+            "description": "The strike was captured as Storm Henri approached the north-east of the US, bringing heavy rain.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-58304611",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1550F/production/_120211378_p09sz59w.jpg",
+            "publishedAt": null
+        },
+        {
+            "author": "BBC News",
+            "title": "Proud Boys leader sentenced for burning Black Lives Matter flag",
+            "description": "Enrique Tarrio admitted to burning a Black Lives Matter flag, stolen from a church, in July.",
+            "url": "http://www.bbc.co.uk/news/world-us-canada-58312254",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/5F0C/production/_120223342_gettyimages-1230094432.jpg",
             "publishedAt": null
         },
         {
@@ -37,50 +69,18 @@
         },
         {
             "author": "BBC News",
-            "title": "Nord Stream 2: Russia must not use gas pipeline as weapon, says Merkel",
-            "description": "The German chancellor says Moscow could face sanctions if it uses Nord Stream 2 against Ukraine.",
-            "url": "http://www.bbc.co.uk/news/world-europe-58301099",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/47C2/production/_120207381_hi069696981.jpg",
+            "title": "Mozambique 'tuna bond' scandal: Ex-President Guebuza's son on trial",
+            "description": "Mozambique's biggest corruption scandal led donors to cut funding and an economic crisis.",
+            "url": "http://www.bbc.co.uk/news/world-africa-58304737",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/6EA2/production/_89622382_mozambique.jpg",
             "publishedAt": null
         },
         {
             "author": "BBC News",
-            "title": "Covid: New Zealand pandemic strategy in doubt amid Delta spread",
-            "description": "The highly infectious Delta variant \"does change the game\", the Covid response minister says.",
-            "url": "http://www.bbc.co.uk/news/world-asia-58297895",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1070C/production/_120204376_gettyimages-1334725653.jpg",
-            "publishedAt": null
-        },
-        {
-            "author": "BBC News",
-            "title": "Afghanistan: Woman gives birth on US evacuation plane",
-            "description": "The woman went into labour en route to Ramstein Air Base in Germany and gave birth on the plane.",
-            "url": "http://www.bbc.co.uk/news/world-asia-58297893",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/91DC/production/_120204373_e9wdcidxsaar_wh.jpg",
-            "publishedAt": null
-        },
-        {
-            "author": "BBC News",
-            "title": "Everly Brothers: US rock 'n' roll star Don Everly dies aged 84",
-            "description": "The rock 'n' roll duo were known for their harmonies and influenced bands including The Beatles.",
-            "url": "http://www.bbc.co.uk/news/world-us-canada-58297621",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/BBF8/production/_120202184_gettyimages-524966152-1.jpg",
-            "publishedAt": null
-        },
-        {
-            "author": "BBC Sport",
-            "title": "Thompson-Herah runs second-fastest 100m",
-            "description": "Olympic champion Elaine Thompson-Herah runs the second fastest time in women's 100m history as she clocks 10.54 seconds in Eugene.",
-            "url": "http://www.bbc.co.uk/sport/athletics/58295310",
-            "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/1FAE/production/_120201180_58295510.jpg",
-            "publishedAt": null
-        },
-        {
-            "author": "BBC News",
-            "title": "Covid: Antibody tests offered to public for first time",
-            "description": "The UK-wide scheme for adults who test positive for coronavirus will launch next week.",
-            "url": "http://www.bbc.co.uk/news/uk-58293249",
-            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/32BD/production/_120198921_gettyimages-1215814790.jpg",
+            "title": "Joséphine Baker to be first black woman to enter France's Panthéon",
+            "description": "Performer and World War Two resistance fighter Joséphine Baker will be honoured at the mausoleum.",
+            "url": "http://www.bbc.co.uk/news/world-europe-58303919",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8021/production/_120210823_gettyimages-3229575-594x594.jpg",
             "publishedAt": null
         }
     ]
