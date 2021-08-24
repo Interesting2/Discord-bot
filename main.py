@@ -398,4 +398,4 @@ async def stop(ctx):
 
 
 if __name__ == '__main__':
-    client.run("ODcwMTMwODk3MDg3Nzc0Nzcw.YQISjA.-K0lAdyPkJkwLPR5nDuVsdY4G-o")
+    client.run("ODcwMTMwODk3MDg3Nzc0Nzcw.YQISjA.fspTq7nWFOcGczOjnvd00k1q8Ss")

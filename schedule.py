@@ -399,5 +399,5 @@ async def log(ctx, amount:int):
 
 
 
-client.run("ODczMDc5MTMzNzQ2Mzg0OTQ3.YQzMTg.TCEm6yhfdoNZC9s-06vbAIzO7E0")
+client.run("ODczMDc5MTMzNzQ2Mzg0OTQ3.YQzMTg.WnXS93B5qMDn1uZ1sx1MVl3hJko")
 
