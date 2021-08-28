@@ -107,7 +107,7 @@ async def run():
                 if len(rmv) != 0:
                     with open(file, "w") as f:
                         for line in tmp_data:
-                            print(line)
+                            #print(line)
                             if line != tmp_data[-1]:
                                 f.write(line + "\n")
                             else:
