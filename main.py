@@ -30,9 +30,9 @@ async def on_ready():
 @tasks.loop(hours=1.0)
 async def reminder():
     
-    channel = client.get_channel(870635831927398412)
+    #channel = client.get_channel(870635831927398412)
     #await channel.send("""```ini\n\t\t\t\t\t\t\t\t\t\t[***Working on Scheduling/Reminder Function ***]```""")
-    game = discord.Game("Idling ...")
+    game = discord.Game("Working on E-commerce Website")
     await client.change_presence(status=discord.Status.online, activity=game)
     #await channel.send("""```yaml\nProfile status changed```""")
     

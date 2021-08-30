@@ -54,7 +54,9 @@ async def start(ctx):
 @tasks.loop(seconds=20)
 async def run():
     channel = client.get_channel(870635831927398412)
-    
+        
+    game = discord.Game("Working on JavaFx")
+    await client.change_presence(status=discord.Status.online, activity = game)
     #utc = datetime.now(timezone('UTC'))
     #asia = utc.astimezone(timezone('Asia/Shanghai'))
     asia = datetime.now()
