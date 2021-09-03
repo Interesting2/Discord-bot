@@ -333,27 +333,31 @@ async def me(ctx):
                 continue
             else:
                 sort_tasks = data[i].split("+")
+                #print(sort_tasks[0])
                 #print(sort_tasks)
                 sd,sm,sy = map(int, sort_tasks[1].split("/"))
                 h,m,s = map(int, sort_tasks[2].split(":"))
                 create_time = datetime(sy, sm, sd, h, m, s)
-                sorted_tasks[create_time] = sort_tasks[0]
-        
+                sorted_tasks[sort_tasks[0]] = create_time
+       
+        #print(sorted_tasks)
         ordered_tasks = sorted(sorted_tasks.items())
-        ordered_tasks = [x[1] for x in ordered_tasks]
+        ordered_tasks = [x[0] for x in ordered_tasks]
         #print(ordered_tasks)
 
         for j,x in enumerate(ordered_tasks):
+            #print(x)
             for i in range(2, len(data)):    
                 if data[i] == "" or data[i] == "\n":
                     continue
                 else:
                     t_name, t_d, t_t, s_d, s_t = data[i].split("+")
                     if t_name == x:
+                        #print(t_name)
                         #embed.add_field(name=u'\u2713', value="testing")
                         embed.add_field(name=f'Due: {t_d} {t_t}\n', value=f'*Task {j+1}: {t_name}*', inline=False)
                         #in_embed = discord.Embed(title = "testing", url="https://asgphone.netlify.app/", color=discord.Color.red(), description="RIP")
-
+                        break
             #embed.add_field(name="**Completed**", value=u'\u2713')
         await channel.send(embed=embed)
 
