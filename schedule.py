@@ -184,10 +184,10 @@ async def time(ctx):
                             sd,sm,sy = map(int, sort_tasks[1].split("/"))
                             h,m,s = map(int, sort_tasks[2].split(":"))
                             create_time = datetime(sy, sm, sd, h, m, s)
-                            sorted_tasks[create_time] = sort_tasks[0]
+                            sorted_tasks[sort_tasks[0]] = create_time
                     
                     ordered_tasks = sorted(sorted_tasks.items())
-                    ordered_tasks = [x[1] for x in ordered_tasks]
+                    ordered_tasks = [x[0] for x in ordered_tasks]
                     
                     for j, x in enumerate(ordered_tasks):
                         for i in range(2, len(lines)):
