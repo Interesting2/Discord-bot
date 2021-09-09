@@ -186,9 +186,10 @@ async def time(ctx):
                             create_time = datetime(sy, sm, sd, h, m, s)
                             sorted_tasks[sort_tasks[0]] = create_time
                     
-                    ordered_tasks = sorted(sorted_tasks.items())
+                    ordered_tasks = sorted(sorted_tasks.items(), key= lambda x:x[1])
+                    #print(ordered_tasks)
                     ordered_tasks = [x[0] for x in ordered_tasks]
-                    
+                    #print(ordered_tasks) 
                     for j, x in enumerate(ordered_tasks):
                         for i in range(2, len(lines)):
                             if lines[i] == "" or lines[i] == "\n": 
@@ -341,7 +342,7 @@ async def me(ctx):
                 sorted_tasks[sort_tasks[0]] = create_time
        
         #print(sorted_tasks)
-        ordered_tasks = sorted(sorted_tasks.items())
+        ordered_tasks = sorted(sorted_tasks.items(), key=lambda x:x[1])
         ordered_tasks = [x[0] for x in ordered_tasks]
         #print(ordered_tasks)
 
